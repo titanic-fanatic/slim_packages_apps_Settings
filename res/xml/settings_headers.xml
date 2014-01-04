@@ -137,6 +137,17 @@
         android:title="@string/applications_settings"
         android:id="@+id/application_settings" />
 
+    <!-- Device Settings -->
+    <header
+        android:icon="@drawable/ic_settings_advanced"
+        android:title="@string/device_settings"
+        android:id="@+id/device_settings">
+        <intent
+            android:action="com.cyanogenmod.action.LAUNCH_DEVICE_SETTINGS"
+            android:targetPackage="com.cyanogenmod.settings.device"
+            android:targetClass="com.cyanogenmod.settings.device.DeviceSettings" />
+    </header>
+
     <!-- Manage users -->
     <header
         android:fragment="com.android.settings.users.UserSettings"
