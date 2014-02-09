@@ -72,6 +72,7 @@ import com.android.settings.applications.ManageApplications;
 import com.android.settings.applications.ProcessStatsUi;
 import com.android.settings.bluetooth.BluetoothEnabler;
 import com.android.settings.bluetooth.BluetoothSettings;
+import com.android.settings.cyanogenmod.PerformanceSettings;
 import com.android.settings.deviceinfo.Memory;
 import com.android.settings.deviceinfo.UsbSettings;
 import com.android.settings.fuelgauge.PowerUsageSummary;
@@ -365,7 +366,8 @@ public class Settings extends PreferenceActivity
         QuickSettingsTiles.class.getName(),
         BatteryIconStyle.class.getName(),
         DisplayRotation.class.getName(),
-        ApnSettings.class.getName()
+        ApnSettings.class.getName(),
+		PerformanceSettings.class.getName()
     };
 
     @Override
@@ -626,7 +628,8 @@ public class Settings extends PreferenceActivity
                        }
                     }
                 }
-            } else if (id == R.id.development_settings) {
+            } else if (id == R.id.development_settings
+                    || id == R.id.performance_settings) {
                 if (!showDev) {
                     target.remove(i);
                 }
