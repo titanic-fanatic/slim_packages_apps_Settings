@@ -90,6 +90,7 @@ import com.android.settings.slim.BatteryIconStyle;
 import com.android.settings.slim.blacklist.BlacklistSettings;
 import com.android.settings.slim.DisplayRotation;
 import com.android.settings.slim.quicksettings.QuickSettingsTiles;
+import com.android.settings.slim.ShakeEvents;
 import com.android.settings.slim.QuietHours;
 import com.android.settings.slim.themes.ThemeEnabler;
 import com.android.settings.tts.TextToSpeechSettings;
@@ -378,6 +379,7 @@ public class Settings extends PreferenceActivity
         DisplayRotation.class.getName(),
         ApnSettings.class.getName(),
 		PerformanceSettings.class.getName()
+        ShakeEvents.class.getName()
     };
 
     @Override
@@ -1188,4 +1190,5 @@ public class Settings extends PreferenceActivity
     public static class QuickSettingsTilesSettingsActivity extends Settings { /* empty */ }
     public static class BatteryIconStyleSettingsActivity extends Settings { /* empty */ }
     public static class DisplayRotationSettingsActivity extends Settings { /* empty */ }
+    public static class ShakeEventsSettingsActivity extends Settings { /* empty */ }
 }
