@@ -184,8 +184,12 @@
     <!-- Shake sensitivity -->
     <string name="shake_sensitivity_title">Shake sensitivity</string>
     <string name="shake_sensitivity_summary">Global sensitivity of all shake preferences</string>
+    <string name="shake_sensitivity_even_less_sensitive">Very insensitive</string>
     <string name="shake_sensitivity_less_sensitive">Less sensitive</string>
     <string name="shake_sensitivity_more_sensitive">More sensitive</string>
+    <string name="shake_sensitivity_very_sensitive">Very sensitive</string>
+    <string name="shake_sensitivity_super_sensitive">Super sensitive</string>
+    <string name="shake_sensitivity_ultra_sensitive">Ultra sensitive</string>
 
     <!-- Wakeup options -->
     <string name="display_category_wakeup_options_title">Wakeup options</string>
@@ -768,6 +772,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!-- Lockscreen widget settings -->
     <string name="lockscreen_widgets_title">Widgets</string>
+    <string name="lockscreen_allow_all_title">Allow all widgets</string>
+    <string name="lockscreen_allow_all_summary">Allow legacy widgets that don\'t natively support lock screen placement</string>
+    <string name="lockscreen_allow_all_warning">Some widgets may not behave as expected when placed on the lock screen.  Other widgets may expose your personal data to anyone who accesses your device.  Please be mindful of these warnings before continuing.</string>
     <string name="lockscreen_camera_widget_title">Enable camera widget</string>
     <string name="lockscreen_camera_widget_summary">Show secure camera widget on the lock screen</string>
     <string name="lockscreen_maximize_widgets_title">Start maximized</string>
