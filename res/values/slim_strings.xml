@@ -1272,5 +1272,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!-- Device specific settings -->
     <string name="screen_off_gesture_settings_title">Screen off gestures</string>
+    
+    <!-- Performance Control -->
+    <string name="performance_settings">Performance</string>
 
 </resources>
