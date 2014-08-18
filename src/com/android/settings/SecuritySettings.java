@@ -83,7 +83,6 @@ public class SecuritySettings extends RestrictedSettingsFragment
     private static final String KEY_SHAKE_TO_SECURE = "shake_to_secure_mode";
     private static final String KEY_SHAKE_AUTO_TIMEOUT = "shake_auto_timeout";
     private static final String LOCK_BEFORE_UNLOCK = "lock_before_unlock";
-    private static final String KEY_ADVANCED_REBOOT = "advanced_reboot";
     private static final String MENU_UNLOCK_PREF = "menu_unlock";
 
     private static final int SET_OR_CHANGE_LOCK_METHOD_REQUEST = 123;
@@ -135,7 +134,6 @@ public class SecuritySettings extends RestrictedSettingsFragment
     private CheckBoxPreference mToggleVerifyApps;
     private CheckBoxPreference mPowerButtonInstantlyLocks;
     private Preference mEnableKeyguardWidgets;
-    private ListPreference mAdvancedReboot;
 
     private CheckBoxPreference mQuickUnlockScreen;
     private ListPreference mLockNumpadRandom;
@@ -481,12 +479,6 @@ public class SecuritySettings extends RestrictedSettingsFragment
                 mToggleVerifyApps.setEnabled(false);
             }
         }
-
-        mAdvancedReboot = (ListPreference) root.findPreference(KEY_ADVANCED_REBOOT);
-        mAdvancedReboot.setValue(String.valueOf(Settings.Secure.getInt(
-                getContentResolver(), Settings.Secure.ADVANCED_REBOOT, 0)));
-        mAdvancedReboot.setSummary(mAdvancedReboot.getEntry());
-        mAdvancedReboot.setOnPreferenceChangeListener(this);
 
         // Determine options based on device telephony support
         if (!pm.hasSystemFeature(PackageManager.FEATURE_TELEPHONY)) {
@@ -907,11 +899,6 @@ public class SecuritySettings extends RestrictedSettingsFragment
                     Settings.Secure.LOCK_BEFORE_UNLOCK,
                     ((Boolean) value) ? 1 : 0);
             shouldEnableTargets();
-        } else if (preference == mAdvancedReboot) {
-            Settings.Secure.putInt(getContentResolver(), Settings.Secure.ADVANCED_REBOOT,
-                    Integer.valueOf((String) value));
-            mAdvancedReboot.setValue(String.valueOf(value));
-            mAdvancedReboot.setSummary(mAdvancedReboot.getEntry());
         } else if (preference == mLockscreenRotation) {
             int userVal = Integer.valueOf((String) value);
             Settings.System.putIntForUser(getContentResolver(),
