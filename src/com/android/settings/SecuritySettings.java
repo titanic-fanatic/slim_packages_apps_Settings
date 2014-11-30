@@ -84,7 +84,6 @@ public class SecuritySettings extends RestrictedSettingsFragment
     private static final String KEY_CREDENTIALS_MANAGER = "credentials_management";
     private static final String KEY_NOTIFICATION_ACCESS = "manage_notification_access";
     private static final String PACKAGE_MIME_TYPE = "application/vnd.android.package-archive";
-    private static final String KEY_ADVANCED_REBOOT = "advanced_reboot";
     private static final String KEY_ENCRYPTION = "encryption";
 
     // Slim Additions
@@ -104,7 +103,6 @@ public class SecuritySettings extends RestrictedSettingsFragment
     private CheckBoxPreference mToggleAppInstallation;
     private DialogInterface mWarnInstallApps;
     private CheckBoxPreference mToggleVerifyApps;
-    private ListPreference mAdvancedReboot;
 
     private Preference mNotificationAccess;
 
@@ -383,12 +381,6 @@ public class SecuritySettings extends RestrictedSettingsFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object value) {
-        if (preference == mAdvancedReboot) {
-            Settings.Secure.putInt(getContentResolver(), Settings.Secure.ADVANCED_REBOOT,
-                    Integer.valueOf((String) value));
-            mAdvancedReboot.setValue(String.valueOf(value));
-            mAdvancedReboot.setSummary(mAdvancedReboot.getEntry());
-        }
         return true;
     }
 
