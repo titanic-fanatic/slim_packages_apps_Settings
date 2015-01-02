@@ -87,7 +87,6 @@ import com.android.settings.nfc.PaymentSettings;
 import com.android.settings.print.PrintJobSettingsFragment;
 import com.android.settings.print.PrintServiceSettingsFragment;
 import com.android.settings.print.PrintSettingsFragment;
-import com.android.settings.slim.AdvancedSettings;
 import com.android.settings.slim.BatteryIconStyle;
 import com.android.settings.slim.blacklist.BlacklistSettings;
 import com.android.settings.slim.DisplayRotation;
@@ -384,7 +383,6 @@ public class Settings extends PreferenceActivity
         InterfaceSettings.class.getName(),
         NavigationSettings.class.getName(),
         ThemeSettings.class.getName(),
-        AdvancedSettings.class.getName()
     };
 
     @Override
@@ -1151,5 +1149,4 @@ public class Settings extends PreferenceActivity
     public static class InterfaceSettingsActivity extends Settings { /* empty */ }
     public static class NavigationSettingsActivity extends Settings { /* empty */ }
     public static class ThemeSettingsActivity extends Settings { /* empty */ }
-    public static class AdvancedSettingsActivity extends Settings { /* empty */ }
 }
